@@ -1,15 +1,10 @@
-/* barre de défilement lorsque le contenu dépasse les bords */
-#container_tableau  { 
-  overflow-x:auto;
-}
 
-/* Mise à zéro de toutes les marges internes et externes */
+/* Marge de la page */
 *{
   padding: 0;
   margin: 0;
 }
 
-/* Affichage au centre de la page html */
 html {
   display: flex;
 }
@@ -18,36 +13,31 @@ body {
 }
 
 /* Entête */
-header div {
-  display: inline;
-  position: relative;
-  left: 10px;
+header {
+  display: flex;
 }
 .image_1 {
-  margin-top: 20px;
-  width: 180px;
-}
-.image_2 {
-  margin-top: 5px;
+  width: 170px;
+  margin-top: 10px;
 }
 .haut_page {
   font-size: 150%;
-  bottom: 15px;
-  left: 420px;
+  margin-top: 25px;
+  margin-left: 470px;
 }
 
 /* Onglets */
-li {
+ul li {
   display: inline-block;
   list-style-type: none;
-  margin-right: 10px;
+  margin-left: 20px;
+  margin-top: 0;
 }
-ul {
+
+/* couleur arrière plan des menus */
+nav {
   background-color: black;
-  padding: 20px;
-  margin-top : 0;
-  padding-left: 50px;
-  width : 1180px;
+  padding: 12px;
 }
 
 /* Style des liens */
@@ -60,123 +50,122 @@ a:hover {
   margin : 10px;
 }
 
+.image_2 {
+  width: 100%;
+  height: auto;
+  margin-top: 5px;
+}
+
 /* Accueil, section et articles */
-.section, #index, .article_1, .article_2, .article_3 {
+.article_1, .article_2, .article_3 {
+  margin-bottom: 30px;
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+}
+.article_3{
+  margin-bottom: 60px;
+}
+
+#index, #contact, #tableau {
+  margin-top: 15px;
   margin-bottom: 20px;
-  padding-top: 0;
-  width: 804px;
-}
-.article_3 {
-  padding-bottom: 40px;
-}
-#index {
   font-size: 180%;
-  font-weight: bold;
-} 
+  font-weight: bold; 
+}
+
 hr {
-  width: 1250px;
-  background: linear-gradient(#D3D3D3, #FFFFFF);
+  width: 100%;
   height: 2px;
+  background: linear-gradient(#D3D3D3, #FFFFFF);
   border: 2px;
   filter: opacity(50%);
 }
 h2 {
-  padding-top: 15px;
   margin-bottom: 15px;
-  font-size: 100%;
+  font-size: 105%;
 }
-p {
-  margin-bottom: 15px;
+article p {
+  margin-top: 15px;
   font-size: 100%;
 }
 
 /* Colonne de droite */
-#colonne_accueil {
-  width: 430px;
-  background-color: #D3D3D3;
-  padding-bottom: 474px;
-  bottom: 498px;
-  right: 0;
-  position: relative;
-  float: right;
+.accueil {
+  display: flex;
 }
 
-/* Mise en forme du titre "contact" */
-#contact {
-  margin-top: 15px;
-  margin-bottom: 20px;
-  font-size: 180%;
-  font-weight: bold;
+aside {
+  font-size: 90%;
+  width: 45%;
+  background-color: #D3D3D3;
+  margin-bottom: 5px;
 }
-  /* Mise en forme du titre "tableau" */
-#tableau {
-  margin-top: 15px;
-  margin-bottom: 20px;
-  font-size: 180%;
-  font-weight: bold;
-}
+
 /* Corps de page des parties tableau et contact */
-table {
+table{
+  /* table-layout: fixed; */
   padding-top: 15px;
-  width: 820px;
+  width: 70%;
+  height: auto;
   text-align: center;
 }
-th {
-  padding-bottom: 15px; 
-}
-#formulaire_contact {
+th{
   padding-bottom: 15px;
-  width: 820px;
 }
-fieldset {
-  margin-bottom: 30px;
+
+#formulaire_contact{
+  padding-top: 15px;
+  width: 100%;
+  height: auto;
 }
+
 
 /* responsive design */
 @media all and (max-width: 768px) {
-
-  html {
-    font-size: 80%;
-  }
-
-  /* Masquage de la colonne de droite */
-  #colonne_accueil {
-    display: none;
-  }
-
   /* Affichage vertical et redimensionnement des menus sur mobile */
-  li {
+  ul li {
     display: flex;
     flex-direction: column;
-    margin : 15px;
+    font-size: 80%;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    margin-top: 15px;
   }
-  ul {
+  nav {
     padding: 2px;
-    padding-left: 20px;
-    width : 728px;
   }
   a:hover {
     margin : 0;
   }
-  .image_1 {
-    width : 150px;
+  
+  /* Masquage de la colonne de droite de la page accueil sur mobile */
+  #colonne_accueil {
+    display: none;
   }
-  .haut_page {
-    left: 250px;
+  
+  /* redimensionnement des polices */
+  .haut_page{
+    font-size: 100%;
+    margin-left: 250px;
+    margin-bottom: 20px;
   }
-  .section, #index, .article_1, .article_2, .article_3, #formulaire_contact, .image_2, body {
-    max-width: 750px;
+  #index,  #contact,  #tableau {
+    font-size: 150%;
+  }
+  h2 {
+    font-size: 90%;
+  }
+
+  .image_1, .image_2
+  {
+    max-width: 100%;
     height: auto;
-  }
-  hr {
-    max-width: 750px;
-    filter: opacity(20%);
-  }
-  .article_3 {
-    padding-bottom: 0;
-  }
-  table {
-    width: 600px;
   }
 }
 
+@media all and (max-width: 575px) {
+  .haut_page {
+    display: none;
+  }
+}
