@@ -7,7 +7,7 @@ bouton2.addEventListener("click", clickbtn2);
 
 function clickbtn2() {
 
-    alert("Ce programme affiche la table de multiplication de nombres entiers supérieurs à 0\n----------")
+    alert("Ce programme affiche la table de multiplication de nombres entiers supérieurs à 0\n----------");
 
     //obtention d'un nombre entier
     var nombreSaisi = prompt("Veuillez entrer le numéro de la table");
