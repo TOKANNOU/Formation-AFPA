@@ -287,7 +287,7 @@ function validation(Event) {
 
 /***********************************************Annulation des saisies*************************************************************************/
 
-document.getElementById("boutonAnnuler").onclick = function AnnulationDesSaisies() {
+document.getElementById("boutonAnnuler").onclick = function annulationDesSaisies() {
 
     dateNaissance = document.getElementById("date_naissance");
     
