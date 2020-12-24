@@ -89,14 +89,14 @@ function validation(Event) {
     if (messageDemande.validity.valueMissing) {
         Event.preventDefault();
         Event.stopPropagation();
-        messageManquant.textContent = "Veuillez saisir votre adresse mail svp !";
+        messageManquant.textContent = "Veuillez saisir votre message !";
         messageManquant.style.color = "#FF0000";
         messageDemande.style.border = "2px solid #FF0000";
         messageDemande.focus();
 
     } else if (messageValide.test(messageDemande.value) == false) {
         Event.preventDefault();
-        messageManquant.textContent = "Veuillez respecter le format prédéfini !";
+        messageManquant.textContent = "Ce champ doit comporter entre 5 et 40 caractères.";
         messageManquant.style.color = "#FF9966";
         messageDemande.style.border = "2px solid #FF9966";
         messageDemande.focus();
