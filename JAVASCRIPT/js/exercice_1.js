@@ -49,7 +49,15 @@ function clickbtn1() {
         }
     } while (agesPersonnes != null);
 
-    alert ("Vous avez saisi " + tableauAge.length + " âge(s) : "+ tableauAge); //affichage de tous les âges saisis
+    //accord des âges (singulier/pluriel) pour l'affichage des âges saisis
+    var accordTableauAge = "";
+    if (tableauAge.length > 1) {
+        accordTableauAge = "âges";
+    } else {
+        accordTableauAge = "âge";
+    }
+
+    alert ("Vous avez saisi " + tableauAge.length + " " + accordTableauAge + " : " + tableauAge); //affichage de tous les âges saisis
 
     //calcul du nombre de jeunes, de moyens et de vieux
     for (var i = 0; i < tableauAge.length; i++) {
@@ -64,9 +72,17 @@ function clickbtn1() {
         }
     }
 
+    //accord des âges pour l'affichage du recensement
+    var accordAge = "";
+    if (jeuneAge.length > 1 || moyenAge.length > 1 || vieuxAge.length > 1) {
+        accordAge = "âges";
+    } else {
+        accordAge = "âge";
+    }
+
     //affichage du recensement
-    alert("On recense : " + "\n\n" + jeuneAge.length + " âge(s) strictement inférieur à 20 ans : " + jeuneAge + 
-          "\n.........." + "\n" + moyenAge.length + " âge(s) compris entre 20 et 40 ans : " + moyenAge + 
-          "\n.........." + "\n" + vieuxAge.length + " âge(s) strictement supérieur à 40 ans : " + vieuxAge + 
+    alert("On recense : " + "\n\n" + jeuneAge.length + " " + accordAge + " strictement inférieur à 20 ans : " + jeuneAge + 
+          "\n.........." + "\n" + moyenAge.length + " " + accordAge + " compris entre 20 et 40 ans : " + moyenAge + 
+          "\n.........." + "\n" + vieuxAge.length + " " + accordAge + " strictement supérieur à 40 ans : " + vieuxAge + 
           "\n..........");
 }
