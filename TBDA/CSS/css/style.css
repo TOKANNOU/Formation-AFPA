@@ -1,0 +1,171 @@
+
+/* Marge de la page */
+*{
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  display: flex;
+}
+body {
+  margin: 0 auto;
+}
+
+/* Entête */
+header {
+  display: flex;
+}
+.image_1 {
+  width: 170px;
+  margin-top: 10px;
+}
+.haut_page {
+  font-size: 150%;
+  margin-top: 25px;
+  margin-left: 470px;
+}
+
+/* Onglets */
+ul li {
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 20px;
+  margin-top: 0;
+}
+
+/* couleur arrière plan des menus */
+nav {
+  background-color: black;
+  padding: 12px;
+}
+
+/* Style des liens */
+a {
+  text-decoration: none;
+  color: #D3D3D3;
+}
+a:hover {
+  color: #0000FF;
+  margin : 10px;
+}
+
+.image_2 {
+  width: 100%;
+  height: auto;
+  margin-top: 5px;
+}
+
+/* Accueil, section et articles */
+.article_1, .article_2, .article_3 {
+  margin-bottom: 30px;
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+}
+.article_3{
+  margin-bottom: 60px;
+}
+
+#index, #contact, #tableau {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-size: 180%;
+  font-weight: bold; 
+}
+
+hr {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(#D3D3D3, #FFFFFF);
+  border: 2px;
+  filter: opacity(50%);
+}
+h2 {
+  margin-bottom: 15px;
+  font-size: 105%;
+}
+article p {
+  margin-top: 15px;
+  font-size: 100%;
+}
+
+/* Colonne de droite */
+.accueil {
+  display: flex;
+}
+
+aside {
+  font-size: 90%;
+  width: 45%;
+  background-color: #D3D3D3;
+  margin-bottom: 5px;
+}
+
+/* Corps de page des parties tableau et contact */
+table{
+  /* table-layout: fixed; */
+  padding-top: 15px;
+  width: 70%;
+  height: auto;
+  text-align: center;
+}
+th{
+  padding-bottom: 15px;
+}
+
+#formulaire_contact{
+  padding-top: 15px;
+  width: 100%;
+  height: auto;
+}
+
+
+/* responsive design */
+@media all and (max-width: 768px) {
+  /* Affichage vertical et redimensionnement des menus sur mobile */
+  ul li {
+    display: flex;
+    flex-direction: column;
+    font-size: 80%;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  nav {
+    padding: 2px;
+  }
+  a:hover {
+    margin : 0;
+  }
+  
+  /* Masquage de la colonne de droite de la page accueil sur mobile */
+  #colonne_accueil {
+    display: none;
+  }
+  
+  /* redimensionnement des polices */
+  .haut_page{
+    font-size: 100%;
+    margin-left: 250px;
+    margin-bottom: 20px;
+  }
+  #index,  #contact,  #tableau {
+    font-size: 150%;
+  }
+  h2 {
+    font-size: 90%;
+  }
+
+  .image_1, .image_2
+  {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 575px) {
+  .haut_page {
+    display: none;
+  }
+}
