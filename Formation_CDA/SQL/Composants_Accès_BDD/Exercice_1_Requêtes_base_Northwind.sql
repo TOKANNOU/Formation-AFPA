@@ -1,10 +1,4 @@
-
 /*1- Liste des contacts français : */
-UPDATE customers
-SET 
-ContactName = 'Frédérique Citeaux'
-WHERE ContactName = 'Frdrique Citeaux';
-
 SELECT CompanyName AS 'Société', ContactName AS 'Contact', ContactTitle AS 'Fonction', Phone AS 'Téléphone'
 FROM customers
 WHERE Country = 'France';
@@ -25,11 +19,6 @@ ORDER BY 2 DESC;
 
 
 /*4- Liste des clients Français ayant plus de 10 commandes : */
-UPDATE customers
-SET 
-CompanyName = 'Blondesddsl père et fils'
-WHERE CompanyName= 'Blondesddsl pre et fils';
-
 SELECT CompanyName AS 'Client', COUNT(orders.OrderID) AS 'Nbre commandes'
 FROM customers, orders
 WHERE customers.CustomerID = orders.CustomerID AND Country = 'France'
