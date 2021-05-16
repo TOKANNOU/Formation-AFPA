@@ -9,7 +9,6 @@ import java.text.DecimalFormatSymbols;
 import java.util.Locale;
 
 public class CalculatorController {
-
     // déclaration des variables
     double first_number;    // premier nombre
     String operator = "";   // initialisation de l'opérateur
@@ -20,7 +19,10 @@ public class CalculatorController {
 
     DecimalFormat df = new DecimalFormat(); // instanciation d'un format décimal
 
-    // méthode de contrôle des boutons pour l'affichage des chiffres dans la deuxième zone de texte
+    /**
+     * méthode de contrôle des boutons pour l'affichage des chiffres dans la deuxième zone de texte
+     * @param click
+     */
     public void number(ActionEvent click) {
         // récupération des contenus des boutons (nombres) suite à leur clic
         String button_text = ((Button)click.getSource()).getText();
@@ -28,7 +30,10 @@ public class CalculatorController {
         text_result.setText(text_result.getText() + button_text);
     }
 
-    // méthode d'affichage des opérations
+    /**
+     * méthode d'affichage des opérations
+     * @param click
+     */
     public void operator(ActionEvent click) {
         // passage de l'affichage des nombres décimaux en langue anglaise ("#.##...")
         df.setDecimalFormatSymbols(DecimalFormatSymbols.getInstance(Locale.ENGLISH));
@@ -74,7 +79,12 @@ public class CalculatorController {
         }
     }
 
-    // méthode de calcul des opérations
+    /**
+     * méthode de calcul des opérations
+     * @param n1
+     * @param n2
+     * @param op
+     */
     public void calculate (double n1, double n2, String op) {
 
         // configuration du format double à minimum aucun chiffre après la virgule et maximum 10
@@ -112,12 +122,19 @@ public class CalculatorController {
         }
     }
 
-    // méthode de suppression du contenu de la zone de texte
+    /**
+     * méthode de suppression du contenu de toutes les zones de texte
+     * @param actionEvent
+     */
     public void clear_button(ActionEvent actionEvent) {
         text_display.clear();
         text_result.clear();
     }
 
+    /**
+     * méthode de suppression chiffre par chiffre d'un nombre
+     * @param click
+     */
     public void delete_digit(ActionEvent click) {
         // récupération du contenu de la première zone de texte
         String numbers = text_result.getText();
@@ -130,6 +147,10 @@ public class CalculatorController {
         }
     }
 
+    /**
+     * méthode d'ajout de "+/-" à un nombre
+     * @param click
+     */
     public void plus_minus_button(ActionEvent click) {
         // passage de l'affichage des nombres décimaux en langue anglaise ("#.##...")
         df.setDecimalFormatSymbols(DecimalFormatSymbols.getInstance(Locale.ENGLISH));
