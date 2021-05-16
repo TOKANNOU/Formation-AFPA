@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="377.0" prefWidth="251.0" stylesheets="@assets/css/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.gui.CalculatorController">
+   <children>
+      <Button alignment="CENTER" layoutX="71.4000015258789" layoutY="322.3999938964844" mnemonicParsing="false" onAction="#number" opacity="0.7" prefHeight="44.0" prefWidth="50.0" style="-fx-background-color: #A9A9A9;" text="0">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+         <effect>
+            <Blend mode="OVERLAY" />
+         </effect>
+      </Button>
+      <Button layoutX="11.399999618530273" layoutY="322.3999938964844" mnemonicParsing="false" onAction="#plus_minus_button" opacity="0.7" prefHeight="44.0" prefWidth="50.0" style="-fx-background-color: #A9A9A9;" text="+/-">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <effect>
+            <Blend mode="OVERLAY" />
+         </effect>
+      </Button>
+      <Button alignment="TOP_CENTER" layoutX="131.39999389648438" layoutY="322.3999938964844" mnemonicParsing="false" onAction="#number" opacity="0.7" prefHeight="44.0" prefWidth="50.0" style="-fx-background-color: #A9A9A9;" text=".">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+         <effect>
+            <Blend mode="OVERLAY" />
+         </effect>
+      </Button>
+      <Button alignment="CENTER" layoutX="190.39999389648438" layoutY="268.3999938964844" mnemonicParsing="false" onAction="#operator" opacity="0.75" prefHeight="98.0" prefWidth="50.0" style="-fx-background-color: #3e91c3;" text="=">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" layoutX="71.4000015258789" layoutY="268.3999938964844" mnemonicParsing="false" onAction="#number" opacity="0.7" prefHeight="44.0" prefWidth="50.0" style="-fx-background-color: #A9A9A9;" text="2">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+         <effect>
+            <Blend mode="OVERLAY" />
+         </effect>
+      </Button>
+      <Button alignment="CENTER" layoutX="11.399999618530273" layoutY="268.3999938964844" mnemonicParsing="false" onAction="#number" opacity="0.7" prefHeight="44.0" prefWidth="50.0" style="-fx-background-color: #A9A9A9;" text="1">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+         <effect>
+            <Blend mode="OVERLAY" />
+         </effect>
+      </Button>
+      <Button alignment="CENTER" layoutX="131.39999389648438" layoutY="268.3999938964844" mnemonicParsing="false" onAction="#number" opacity="0.7" prefHeight="44.0" prefWidth="50.0" style="-fx-background-color: #A9A9A9;" text="3">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+         <effect>
+            <Blend mode="OVERLAY" />
+         </effect>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="190.39999389648438" layoutY="214.39999389648438" mnemonicParsing="false" onAction="#operator" opacity="0.75" prefHeight="44.0" prefWidth="50.0" style="-fx-background-color: #3e91c3;" text="+">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" layoutX="71.4000015258789" layoutY="214.39999389648438" mnemonicParsing="false" onAction="#number" opacity="0.7" prefHeight="44.0" prefWidth="50.0" style="-fx-background-color: #A9A9A9;" text="5">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+         <effect>
+            <Blend mode="OVERLAY" />
+         </effect>
+      </Button>
+      <Button alignment="CENTER" layoutX="11.399999618530273" layoutY="214.39999389648438" mnemonicParsing="false" onAction="#number" opacity="0.7" prefHeight="44.0" prefWidth="50.0" style="-fx-background-color: #A9A9A9;" text="4">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+         <effect>
+            <Blend mode="OVERLAY" />
+         </effect>
+      </Button>
+      <Button alignment="CENTER" layoutX="131.39999389648438" layoutY="214.39999389648438" mnemonicParsing="false" onAction="#number" opacity="0.7" prefHeight="44.0" prefWidth="50.0" style="-fx-background-color: #A9A9A9;" text="6">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+         <effect>
+            <Blend mode="OVERLAY" />
+         </effect>
+      </Button>
+      <Button alignment="CENTER" layoutX="190.39999389648438" layoutY="160.39999389648438" mnemonicParsing="false" onAction="#operator" opacity="0.75" prefHeight="44.0" prefWidth="50.0" style="-fx-background-color: #3e91c3;" text="-" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" layoutX="71.4000015258789" layoutY="160.39999389648438" mnemonicParsing="false" onAction="#number" opacity="0.7" prefHeight="44.0" prefWidth="50.0" style="-fx-background-color: #A9A9A9;" text="8">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+         <effect>
+            <Blend mode="OVERLAY" />
+         </effect>
+      </Button>
+      <Button alignment="CENTER" layoutX="11.399999618530273" layoutY="160.39999389648438" mnemonicParsing="false" onAction="#number" opacity="0.7" prefHeight="44.0" prefWidth="50.0" style="-fx-background-color: #A9A9A9;" text="7">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+         <effect>
+            <Blend mode="OVERLAY" />
+         </effect>
+      </Button>
+      <Button alignment="CENTER" layoutX="131.39999389648438" layoutY="160.39999389648438" mnemonicParsing="false" onAction="#number" opacity="0.7" prefHeight="44.0" prefWidth="50.0" style="-fx-background-color: #A9A9A9;" text="9">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+         <effect>
+            <Blend mode="OVERLAY" />
+         </effect>
+      </Button>
+      <Button alignment="CENTER" layoutX="71.4000015258789" layoutY="106.4000015258789" mnemonicParsing="false" onAction="#operator" opacity="0.75" prefHeight="44.0" prefWidth="50.0" style="-fx-background-color: #3e91c3;" text="÷">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Button>
+      <Button alignment="TOP_CENTER" layoutX="11.399999618530273" layoutY="106.4000015258789" mnemonicParsing="false" onAction="#clear_button" opacity="0.75" prefHeight="44.0" prefWidth="50.0" style="-fx-background-color: #3e91c3;" text="c">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Button>
+      <Button alignment="TOP_CENTER" layoutX="131.39999389648438" layoutY="106.4000015258789" mnemonicParsing="false" onAction="#operator" opacity="0.75" prefHeight="44.0" prefWidth="50.0" style="-fx-background-color: #3e91c3;" text="x">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Button>
+      <Group layoutX="187.39999389648438" layoutY="106.4000015258789">
+         <children>
+            <Button cancelButton="true" layoutX="3.0" mnemonicParsing="false" onAction="#delete_digit" opacity="0.75" prefHeight="44.0" prefWidth="50.0" style="-fx-background-color: #3e91c3;" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <ImageView blendMode="DARKEN" cache="true" fitHeight="16.0" fitWidth="34.0" layoutX="13.0" layoutY="15.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/picture/deleteButton.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Group>
+      <TextField fx:id="text_display" alignment="CENTER_RIGHT" disable="true" layoutX="10.399999618530273" layoutY="10.399999618530273" prefHeight="31.0" prefWidth="231.0" AnchorPane.leftAnchor="5.800000000000011" AnchorPane.rightAnchor="7.0">
+         <effect>
+            <Blend mode="SCREEN" />
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="text_result" alignment="CENTER_RIGHT" disable="true" layoutX="10.399999618530273" layoutY="54.400001525878906" prefHeight="43.0" prefWidth="224.0" AnchorPane.leftAnchor="5.800000000000011" AnchorPane.rightAnchor="14.0">
+         <effect>
+            <Blend mode="SCREEN" />
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
