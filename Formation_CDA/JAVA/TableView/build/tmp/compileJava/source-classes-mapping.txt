@@ -1,0 +1,6 @@
+org/openjfx/gui/RegisterController.java
+ org.openjfx.gui.RegisterController
+org/openjfx/model/Customers.java
+ org.openjfx.model.Customers
+org/openjfx/App.java
+ org.openjfx.App

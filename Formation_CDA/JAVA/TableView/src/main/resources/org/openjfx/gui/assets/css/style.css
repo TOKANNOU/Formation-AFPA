@@ -1,0 +1,98 @@
+/**
+ * configuration (mise en page) des labels
+ */
+.label {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-opacity: 0.6;
+}
+
+
+/**
+ * configuration du message d'erreur
+ */
+.text_error {
+    -fx-background-color: transparent;
+    -fx-text-fill: #FF3F45;
+}
+
+
+/**
+ * configuration (mise en page) du TableView
+ */
+.table-view {
+    -fx-base: #1d1d1d;
+    -fx-control-inner-background: #1d1d1d;
+    -fx-background-color: #1d1d1d;
+    -fx-table-cell-border-color: transparent;
+    -fx-padding: 0;
+}
+
+/* mise en page de l'entête */
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 35;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: transparent;
+    -fx-border-color:
+            transparent
+            transparent
+            derive(-fx-base, 80%)
+            transparent;
+    -fx-border-insets: 0 10 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+/* changement de la police des éléments de chaque ligne du tableau */
+.table-view .table-row-cell {
+    -fx-font-size: 11pt;
+}
+
+/* réduction de l'opacité au clic d'une ligne */
+.table-view:row-selection .table-row-cell:hover:pressed {
+    -fx-opacity: 0.5;
+}
+
+
+/**
+ * mise en page de la ligne de division de la scene
+ */
+.split-pane:horizontal > .split-pane-divider {
+    -fx-border-color: transparent #1d1d1d transparent #1d1d1d;
+    -fx-background-color: transparent, derive(#1d1d1d,20%);
+}
+
+
+/**
+ * configuration (mise en page) des boutons de contrôle
+ */
+.button {
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #1d1d1d;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 10pt;
+    -fx-text-fill: #d8d8d8;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+    -fx-background-color: #3a3a3a;
+}
+
+.button:pressed, .button:default:hover:pressed {
+    -fx-background-color: white;
+    -fx-text-fill: #1d1d1d;
+}
